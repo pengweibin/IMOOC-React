@@ -18,6 +18,13 @@ module.exports = {
       }
     ]
   },
+  devServer: { 
+    host: '127.0.0.1',
+    port: 8088,
+    watchOptions: {
+      poll: true
+    }
+  },
   output: {
     path: __dirname,
     filename: "./src/bundle.js"

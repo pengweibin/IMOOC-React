@@ -1,15 +1,19 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-import ComponentHeader from './components/header';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Header from './components/header'
+
 class Index extends React.Component {
-	render() {
+	render () {
 		return (
 			<div>
-				<ComponentHeader/>
-				<h2>页面的主体内容</h2>
+				<Header></Header>
+				<div>页面的主题内容</div>
 			</div>
-		);
+		)
 	}
 }
+
 ReactDOM.render(
-	<Index/>, document.getElementById('example'));
+	<Index />,
+	document.getElementById('example')
+)
