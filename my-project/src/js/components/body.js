@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 export default class Body extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       username: 'wrysun'
     }
@@ -24,7 +24,7 @@ export default class Body extends React.Component {
     return (
       <div>
         <h2>这是主体部分内容</h2>
-        <p>{this.state.username}</p>
+        <p>{this.state.username} | {this.props.userid}</p>
         {/* <p>{userName || '未登录'}</p>
         <p><input type="button" value={userName} disabled={boolInput}/></p>
         <p>{html}</p> */}
