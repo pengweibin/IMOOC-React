@@ -5,6 +5,12 @@ import Body from './components/body'
 import Footer from './components/footer'
 
 class Index extends React.Component {
+	componentWillMount () {
+		console.log('indexWill')
+	}
+	componentDidMount () {
+		console.log('indexDid')
+	}
 	render () {
     let component = <Footer></Footer>
 		// 用处

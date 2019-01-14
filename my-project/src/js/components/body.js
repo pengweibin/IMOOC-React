@@ -2,6 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 export default class Body extends React.Component {
+  componentWillMount () {
+    // 页面将要加载
+    console.log('will')
+  }
+  componentDidMount () {
+    // 页面加载完成
+    console.log('did')
+  }
   render () {
     let userName = 'Wrysun'
     let boolInput = false
