@@ -19,11 +19,6 @@ class Index extends React.Component {
 	}
 	render () {
     let component = <Footer></Footer>
-		setTimeout(() => {
-			this.setState({
-				userid: 456
-			})
-		}, 2000)
 		// 用处
 		// if (用户未登录) {
 		// 	component = 其他组件
