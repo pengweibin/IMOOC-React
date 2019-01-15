@@ -23,6 +23,7 @@ export default class Body extends React.Component {
     console.log('did')
   }
   onChange () {
+    this.refs.button.style.color = 'red'
     this.setState({
       username: '未登录'
     })
@@ -41,7 +42,7 @@ export default class Body extends React.Component {
       <div>
         <h2>这是主体部分内容</h2>
         <p>{this.state.username} | {this.props.userid}</p>
-        <input type="button" value="提交" onClick={this.onChange.bind(this)} />
+        <input ref="button" type="button" value="提交" onClick={this.onChange.bind(this)} />
         <BodyChild {...this.props} onValueChange={this.onValueChange.bind(this)}/>
         {/* <p>{userName || '未登录'}</p>
         <p><input type="button" value={userName} disabled={boolInput}/></p>
