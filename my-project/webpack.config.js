@@ -2,8 +2,12 @@ var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
 
+function resolve (dir) {
+  return path.join(__dirname, dir)
+}
+
 module.exports = {
-  context: path.join(__dirname),
+  context: path.resolve(__dirname, './'),
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./src/js/index.js",
   module: {
@@ -15,7 +19,11 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+      },
     ]
   },
   devServer: { 
@@ -28,6 +36,12 @@ module.exports = {
   output: {
     path: __dirname,
     filename: "./src/bundle.js"
+  },
+  resolve: {
+    extensions: ['.js', '.json', '.css'],
+    alias: {
+      '@': resolve('src'),
+    }
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --inline --content-base"
+    "start": "webpack-dev-server --inline --hot"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,10 @@
     "react-mixin": "2",
     "webpack": "2.x",
     "webpack-dev": "^1.1.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.3",
+
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "style-loader": "^0.13.1",
+    "css-loader": "^0.25.0"
   }
 }
