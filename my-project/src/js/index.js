@@ -8,7 +8,7 @@ class Index extends React.Component {
 	constructor () {
 		super()
 		this.state = {
-			userid: 123
+			userid: true
 		}
 	}
 	componentWillMount () {
@@ -26,7 +26,7 @@ class Index extends React.Component {
 		return (
 			<div>
 				<Header></Header>
-				<Body userid={this.state.userid}></Body>
+				<Body userid={123}></Body>
 				{component}
 			</div>
 		)

@@ -1,6 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import BodyChild from './bodyChild'
+
+const defaultProps = {
+  userid: 111
+}
 
 export default class Body extends React.Component {
   constructor (props) {
@@ -37,7 +42,7 @@ export default class Body extends React.Component {
         <h2>这是主体部分内容</h2>
         <p>{this.state.username} | {this.props.userid}</p>
         <input type="button" value="提交" onClick={this.onChange.bind(this)} />
-        <BodyChild onValueChange={this.onValueChange.bind(this)}/>
+        <BodyChild {...this.props} onValueChange={this.onValueChange.bind(this)}/>
         {/* <p>{userName || '未登录'}</p>
         <p><input type="button" value={userName} disabled={boolInput}/></p>
         <p>{html}</p> */}
@@ -47,3 +52,11 @@ export default class Body extends React.Component {
     )
   }
 }
+
+// 设置 userid 校验
+// Body.propTypes = {
+//   userid: PropTypes.number.isRequired
+// }
+
+// 设置默认值
+Body.defaultProps = defaultProps
