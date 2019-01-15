@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import BodyChild from './bodyChild'
+import ReactMixin from 'react-mixin'
+import MixinLog from './mixins'
 
 const defaultProps = {
   userid: 111
@@ -27,6 +29,7 @@ export default class Body extends React.Component {
     this.setState({
       username: '未登录'
     })
+    MixinLog.log()
   }
   onValueChange (event) {
     this.setState({
@@ -61,3 +64,5 @@ export default class Body extends React.Component {
 
 // 设置默认值
 Body.defaultProps = defaultProps
+
+ReactMixin(Body.prototype, MixinLog)

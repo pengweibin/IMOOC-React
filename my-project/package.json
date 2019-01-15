@@ -18,6 +18,7 @@
     "prop-types": "^15.6.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-mixin": "2",
     "webpack": "2.x",
     "webpack-dev": "^1.1.1",
     "webpack-dev-server": "^2.9.3"
