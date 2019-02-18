@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // var footerCss = require('../../css/footer.css')
 // import footerCss from '@/css/footer.css'
+import { Input } from 'antd'
 
 export default class Footer extends React.Component {
   render () {
@@ -15,8 +16,9 @@ export default class Footer extends React.Component {
     }
     console.log(footerStyle)
     return (
-      <footer className={footerStyle.minFooter}>
+      <footer style={footerStyle.minFooter}>
         <h1>这是页脚, 一般放置版权的一些信息</h1>
+        <Input placeholder="Basic usage" />
       </footer>
     )
   }

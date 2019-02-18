@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Header from './components/header'
 import Body from './components/body'
 import Footer from './components/footer'
+import "antd/dist/antd.css"
 
 class Index extends React.Component {
 	constructor () {
