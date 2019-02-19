@@ -5,7 +5,7 @@ import Body from './components/body'
 import Footer from './components/footer'
 import "antd/dist/antd.css"
 
-class Index extends React.Component {
+export default class Index extends React.Component{
 	constructor () {
 		super()
 		this.state = {
@@ -28,13 +28,9 @@ class Index extends React.Component {
 			<div>
 				<Header></Header>
 				<Body userid={123}></Body>
+				<div>{this.props.children}</div>
 				{component}
 			</div>
 		)
 	}
 }
-
-ReactDOM.render(
-	<Index />,
-	document.getElementById('example')
-)

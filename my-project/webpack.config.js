@@ -9,7 +9,7 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, './'),
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./src/js/index.js",
+  entry: "./src/js/root.js",
   module: {
     loaders: [
       {

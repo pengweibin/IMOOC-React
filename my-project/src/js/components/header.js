@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import { Link } from 'react-router'
 
 export default class Header extends React.Component {
   constructor () {
@@ -23,8 +24,13 @@ export default class Header extends React.Component {
       }
     }
     return (
-      <header style={styleHeader.header} className="header" onClick={this.handleClickHeader.bind(this)}>
+      <header style={styleHeader.header} className="header">
         <h1>这里是头部</h1>
+        <ul>
+          <li><Link to={'/'}>首页</Link></li>
+          <li><Link to={'detail'}>嵌套的详情</Link></li>
+          <li><Link to={'list'}>列表</Link></li>
+        </ul>
       </header>
     )
   }
