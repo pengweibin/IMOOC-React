@@ -28,7 +28,8 @@ export default class Header extends React.Component {
         <h1>这里是头部</h1>
         <ul>
           <li><Link to={'/'}>首页</Link></li>
-          <li><Link to={'detail'}>嵌套的详情</Link></li>
+          <li><Link to={'detail'}>嵌套的导航对应页1</Link></li>
+          <li><Link to={'nav'}>嵌套的导航对应页2</Link></li>
           <li><Link to={'list'}>列表</Link></li>
         </ul>
       </header>
